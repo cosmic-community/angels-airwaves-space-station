@@ -13,6 +13,7 @@ module.exports = {
         'neon-purple': '#9d4edd',
         'cosmic-blue': '#240046',
         'star-white': '#f8f9fa',
+        'border': '#1a1a2e', // Added missing border color definition
       },
       fontFamily: {
         'space': ['Orbitron', 'monospace'],
