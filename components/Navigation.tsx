@@ -50,18 +50,6 @@ export default function Navigation() {
             >
               About
             </a>
-            <a 
-              href="#news" 
-              className="text-star-white hover:text-neon-cyan transition-colors duration-300 font-medium"
-            >
-              News
-            </a>
-            <a 
-              href="#tour" 
-              className="text-star-white hover:text-neon-cyan transition-colors duration-300 font-medium"
-            >
-              Tour
-            </a>
           </div>
 
           {/* Mobile menu button */}

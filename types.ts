@@ -46,23 +46,6 @@ interface Member extends CosmicObject {
   };
 }
 
-// News/Blog post interface
-interface NewsPost extends CosmicObject {
-  type: 'news';
-  metadata: {
-    content?: string;
-    excerpt?: string;
-    date?: string;
-    author?: string;
-    featured_image?: {
-      url: string;
-      imgix_url: string;
-    };
-    tags?: string[];
-    category?: string;
-  };
-}
-
 // Album interface
 interface Album extends CosmicObject {
   type: 'albums';
@@ -91,19 +74,6 @@ interface Track extends CosmicObject {
   };
 }
 
-// Tour date interface
-interface TourDate extends CosmicObject {
-  type: 'tour-dates';
-  metadata: {
-    date?: string;
-    venue?: string;
-    city?: string;
-    country?: string;
-    ticket_url?: string;
-    status?: 'upcoming' | 'sold-out' | 'cancelled';
-  };
-}
-
 // API response types
 interface CosmicResponse<T> {
   objects: T[];
@@ -117,16 +87,8 @@ function isBandInfo(obj: CosmicObject): obj is BandInfo {
   return obj.type === 'band-info';
 }
 
-function isNewsPost(obj: CosmicObject): obj is NewsPost {
-  return obj.type === 'news';
-}
-
 function isAlbum(obj: CosmicObject): obj is Album {
   return obj.type === 'albums';
-}
-
-function isTourDate(obj: CosmicObject): obj is TourDate {
-  return obj.type === 'tour-dates';
 }
 
 // Export all types
@@ -134,16 +96,12 @@ export type {
   CosmicObject,
   BandInfo,
   Member,
-  NewsPost,
   Album,
   Track,
-  TourDate,
   CosmicResponse
 };
 
 export {
   isBandInfo,
-  isNewsPost,
-  isAlbum,
-  isTourDate
+  isAlbum
 };

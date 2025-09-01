@@ -39,40 +39,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* News Section Preview */}
-      <section id="news" className="relative py-20 lg:py-32 bg-cosmic-blue/10">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-space text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple mb-4">
-              Latest Transmissions
-            </h2>
-            <p className="text-star-white/70 text-lg font-cosmic max-w-2xl mx-auto">
-              Stay updated with the latest news, releases, and cosmic adventures from Angels & Airwaves
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Sample news cards - would be populated from Cosmic CMS */}
-            {[1, 2, 3].map((index) => (
-              <div key={index} className="bg-space-purple/30 backdrop-blur-md border border-neon-cyan/20 rounded-xl p-6 neon-glow hover:scale-105 transition-transform duration-300">
-                <div className="h-48 bg-cosmic-blue/30 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-neon-cyan/50">News Image</span>
-                </div>
-                <h3 className="font-space text-xl font-semibold text-neon-cyan mb-2">
-                  Latest Update {index}
-                </h3>
-                <p className="text-star-white/70 text-sm font-cosmic mb-4">
-                  Exciting news from the cosmic headquarters. More details coming soon...
-                </p>
-                <div className="text-neon-purple text-xs font-cosmic">
-                  December 2024
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact/Social Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container mx-auto px-6 text-center">
