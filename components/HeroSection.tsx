@@ -1,3 +1,5 @@
+'use client'
+
 export default function HeroSection() {
   const scrollToMusic = () => {
     const musicSection = document.getElementById('music')
