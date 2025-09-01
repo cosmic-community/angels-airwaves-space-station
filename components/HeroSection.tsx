@@ -1,4 +1,11 @@
 export default function HeroSection() {
+  const scrollToMusic = () => {
+    const musicSection = document.getElementById('music')
+    if (musicSection) {
+      musicSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       {/* Content */}
@@ -17,7 +24,10 @@ export default function HeroSection() {
         </p>
 
         {/* CTA Button */}
-        <button className="group relative px-8 py-4 bg-transparent border-2 border-neon-cyan text-neon-cyan font-space font-semibold tracking-wider uppercase rounded-full overflow-hidden transition-all duration-300 hover:text-space-dark neon-glow">
+        <button 
+          onClick={scrollToMusic}
+          className="group relative px-8 py-4 bg-transparent border-2 border-neon-cyan text-neon-cyan font-space font-semibold tracking-wider uppercase rounded-full overflow-hidden transition-all duration-300 hover:text-space-dark neon-glow cursor-pointer"
+        >
           <span className="relative z-10">Explore the Universe</span>
           <div className="absolute inset-0 bg-neon-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
         </button>
